@@ -1,6 +1,6 @@
 #pragma once
 
-struct Node{
+struct node{
     int data;
-    Node* node;
+    node* next;
 };
