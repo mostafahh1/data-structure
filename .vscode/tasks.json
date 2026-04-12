@@ -1,0 +1,23 @@
+{
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "build cpp",
+                "type": "shell",
+                "command": "C:/msys64/mingw64/bin/g++.exe",
+                "args": [
+                    "src/*.cpp",
+                    "-I",
+                    "include",
+                    "-g",
+                    "-o",
+                    "build/app.exe"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+                "problemMatcher": ["$gcc"]
+            }
+        ]
+    }
