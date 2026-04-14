@@ -83,3 +83,21 @@ void tree::deleteTree(node2* node){
     }
 }
 
+node2* tree::search(int value){
+    return search_(value,root);
+}
+
+node2* tree::search_(int value , node2* pnode){
+    if (pnode == nullptr){
+        return nullptr;
+    }
+
+    if(pnode->data == value){
+        return pnode;
+    }else if(pnode->data > value){
+        return search_(value ,pnode->left);
+    }else{
+        return search_(value ,pnode->right);
+    }
+    
+}

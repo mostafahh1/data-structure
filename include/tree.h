@@ -17,6 +17,7 @@ private:
     void inorder_(node2* node);
     void preorder_(node2* node);
     void postorder_(node2* node);
+    node2* search_(int value , node2* pnode);
 public:
     tree();
     ~tree();
