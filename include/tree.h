@@ -6,6 +6,7 @@ class tree {
 public:
     tree();
     
+
     
     ~tree();
 };
