@@ -5,5 +5,6 @@ using namespace std;
 class tree {
 public:
     tree();
+    
     ~tree();
 };
