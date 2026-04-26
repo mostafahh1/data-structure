@@ -14,6 +14,7 @@ class tree {
 private:
     node2* root = nullptr;
     void insert_(int value,node2* &pnode);
+    void breadth_first_(node2* node);
     void inorder_(node2* node);
     void preorder_(node2* node);
     void postorder_(node2* node);
@@ -22,6 +23,7 @@ public:
     tree();
     ~tree();
     void insert(int value);
+    void breadth_first();
     void inorder();
     void preorder();
     void postorder();

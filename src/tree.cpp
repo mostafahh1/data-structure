@@ -1,4 +1,5 @@
 #include "../include/tree.h"
+#include <queue>
 
 tree::tree() {
 
@@ -38,7 +39,38 @@ void tree::insert_(int value,node2* &pnode){
 
 }
 
-void tree::inorder(){
+void tree::breadth_first(){
+    breadth_first_(root);
+}
+
+void tree::breadth_first_(node2* node){
+    if (node == nullptr){
+        return;
+    }
+
+    queue<node2*> q;
+    q.push(node);
+
+    while (!q.empty()){
+        node2* current = q.front();
+        q.pop();
+
+        cout << current->data << " ";
+
+        if (current->left != nullptr){
+            q.push(current->left);
+        }
+
+        if (current->right != nullptr){
+            q.push(current->right);
+        }
+    }
+}
+
+
+
+// Depth_First_Traversal
+void tree::inorder(){ 
     inorder_(root);
 }
 
