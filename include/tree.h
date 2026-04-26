@@ -21,6 +21,9 @@ private:
     node2* search_(int value , node2* pnode);
 public:
     tree();
+    
+
+    
     ~tree();
     void insert(int value);
     void breadth_first();
